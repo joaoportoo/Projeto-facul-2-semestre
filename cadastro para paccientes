@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h> 
+
+main(){
+       char c,cadastro_login[50],cadastro_senha[8],acesso_login[50],acesso_senha[8];
+       int a=0,b=1,d=3;
+       printf("\n\t\t\tCADASTRO PARA PACIENTES\n\nDigite o login: ");
+       fflush(stdin);                    
+       gets(cadastro_login);             
+       printf("\nDigite a senha: ");
+       do{
+           c=getch();
+           if(isprint(c)){     
+           cadastro_senha[a]=c;  
+           a++;
+           printf("*");       
+           }
+           else if(c==8&&a){     
+           cadastro_senha[a]='\0';
+           a--;
+           printf("\b \b");       
+           }
+       }while(c!=13);    
+       cadastro_senha[a]='\0';
+       system("cls"); 
+       printf("\n\nCadastro efetuado com sucesso...\n\n");
+       do{
+           printf("\nEntre com o login: ");
+           fflush(stdin); 
+           gets(acesso_login);
+           printf("\nEntre com a senha: ");
+           a=0;
+               do{
+                   c=getch();
+                   if(isprint(c)){   
+                   acesso_senha[a]=c;
+                   a++;
+                   printf("*"); 
+                   }
+                   else if(c==8&&a){
+                   acesso_senha[a]='\0';
+                   a--;
+                   printf("\b \b");   
+                   }
+               }while(c!=13);  
+               acesso_senha[a]='\0';
+
+               if(!strcmp(cadastro_login,acesso_login)&&!strcmp(cadastro_senha,acesso_senha)){
+               
+               printf("\n\n\t\t\tLOGADO COM SUCESSO...\n\n");
+               b=0;
+               }
+               else {
+               system("cls");
+               d--;    
+               if (d)printf("\n\n\t\a\tSENHA INVALIDA - TENTE NOVAMENTE...\n\n");
+               }
+       }while(b&&d); 
+       if(!d)printf("\a\n\n\t\tCONTA BLOQUEADA - VOCE ERROU 3 VEZES CONSECUTIVAS...\n\n");
+
+system("pause");      
+}
+
+
