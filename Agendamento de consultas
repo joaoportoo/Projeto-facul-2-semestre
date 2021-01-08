@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h> 
+
+main(){
+       char c,cadastro_dia[8],cadastro_horario[8];
+       int cpf;
+       printf("\n\t\t\tCADASTRO DE AGENDAMENTOS\n\nDigite o dia: ");
+       fflush(stdin);                    
+       gets(cadastro_dia);             
+       printf("\nDigite o horario: ");
+       fflush(stdin);                    
+       gets(cadastro_horario); 
+           
+       printf("\n\n\t\t\tAGUARDANDO DADOS PARA A FINALIZACAO DO AGENDAMENTO\n\n");
+           printf ("\t\t\tINSIRA SEU CPF PARA CONFIRMAR O AGENDAMENTO\n\n");
+           printf("\nDigite seu CPF: ");
+           scanf ("%i", &cpf);
+               printf("\n\n\t\t\tCONSULTA AGENDADA COM SUCESSO\n\n");
+               
+system ("pause");
+}
