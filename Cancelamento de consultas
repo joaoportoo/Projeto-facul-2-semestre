@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h> 
+
+main(){
+       char c,cadastro_dia[8],cadastro_horario[8];
+       int cpf, digite;
+       printf("\n\t\t\tCANCELAMENTO DE CONSULTAS\n\nDigite o dia: ");
+       fflush(stdin);                    
+       gets(cadastro_dia);             
+       printf("\nDigite o horario: ");
+       fflush(stdin);                    
+       gets(cadastro_horario); 
+           
+       printf("\n\n\t\t\tAGUARDANDO DADOS PARA A FINALIZACAO DO CANCELAMENTO\n\n");
+           printf ("\t\t\tINSIRA SEU CPF PARA CANCELAR SEU AGENDAMENTO\n\n");
+           printf("\nDigite seu CPF: ");
+           scanf ("%i", &cpf);
+               printf("\n\n\t\t\tCONSULTA CANCELADA COM SUCESSO\n\n");
+    printf ("\t\t\tESPACO PARA RECLAMACOES, DUVIDAS OU ELOGIOS\n\n");
+    printf ("Digite:");
+    scanf ("%i", &digite);
+    printf ("\n\t\t\tPRESSIONE ''ENTER'' PARA ENVIAR\n\n");
+    printf ("\n\t\t\tOBRIGADO!\n\n");
+               
+system ("pause");
+}
